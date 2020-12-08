@@ -49,6 +49,6 @@ echo "[########## ] %90 Yukleniyor..."
 sleep 1
 clear
 echo "[###########] %100 Basariyla Kuruldu"
-echo 't1looker kuruldu!'
-echo "$ t1looker"
+echo 't1look kuruldu!'
+echo "$ t1look"
 echo "Komutunu kullanarak yazılımı çalıştırabilir CTRL+C Yaparak durdurabilirsiniz.."
