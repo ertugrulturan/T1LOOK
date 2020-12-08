@@ -34,16 +34,16 @@ echo "[#          ] %5 Yukleniyor..."
 sleep 2
 clear
 echo "[##         ] %15 Yukleniyor..."
-sleep 1
+sleep 5
 clear
 echo "[####       ] %20 Yukleniyor..."
-sleep 4
+sleep 10
 clear
 echo "[#####      ] %30 Yukleniyor..."
 sleep 5
 clear
 echo "[#########  ] %80 Yukleniyor..."
-sleep 5
+sleep 8
 clear
 echo "[########## ] %90 Yukleniyor..."
 sleep 1
