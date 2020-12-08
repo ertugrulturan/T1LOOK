@@ -1,22 +1,26 @@
 #!/bin/bash
 # Github: @ertugrulturan  /  T13R / L1nux-Dev
+if ! [ $(id -u) = 0 ]; then
+   echo "sadece root kullanicida kurulum yapilir!"
+   exit 1
+fi
 if [ ! -f /bin/netstat ]; then
 	# Netstat centos/debian/ubuntu kurulumu + tüm os sistem güncelleme
 	yum -y install net-tools > /dev/null 2>/dev/null &
-	sudo apt-get update > /dev/null 2>/dev/null &
-	sudo apt-get -y install net-tools > /dev/null 2>/dev/null &
+	apt-get update > /dev/null 2>/dev/null &
+	apt-get -y install net-tools > /dev/null 2>/dev/null &
 fi
 if [ ! -f /usr/bin/sar ]; then
 	# Sysstat centos/debian/ubuntu kurulumu + tüm os sistem güncelleme
 	yum -y install sysstat > /dev/null 2>/dev/null &
-	sudo apt-get update > /dev/null 2>/dev/null &
-	sudo apt-get -y install sysstat > /dev/null 2>/dev/null &
+	apt-get update > /dev/null 2>/dev/null &
+	apt-get -y install sysstat > /dev/null 2>/dev/null &
 fi
 if [ ! -f /usr/bin/bc ]; then
 	# bc centos/debian/ubuntu kurulumu + tüm os sistem güncelleme
 	yum -y install bc > /dev/null 2>/dev/null &
-	sudo apt-get update > /dev/null 2>/dev/null &
-	sudo apt-get -y install bc > /dev/null 2>/dev/null &
+	apt-get update > /dev/null 2>/dev/null &
+	apt-get -y install bc > /dev/null 2>/dev/null &
 fi
 if [ ! -d /tmp ]; then
 	mkdir -p /tmp
