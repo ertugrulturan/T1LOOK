@@ -5,4 +5,4 @@
 # Aracın Kurulumu (Tek Komutla),
 `$ sh <(curl https://raw.githubusercontent.com/ertugrulturan/T1LOOK/main/install || wget -O - https://raw.githubusercontent.com/ertugrulturan/T1LOOK/main/install)`
 
-# Video, (EKLENİCEK!)
+# Video; (EKLENİCEK!)
