@@ -1,0 +1,50 @@
+#!/bin/bash
+# Github: @ertugrulturan  /  T13R / L1nux-Dev
+if [ ! -f /bin/netstat ]; then
+	# Netstat centos/debian/ubuntu kurulumu + tüm os sistem güncelleme
+	yum -y install net-tools > /dev/null 2>/dev/null &
+	sudo apt-get update > /dev/null 2>/dev/null &
+	sudo apt-get -y install net-tools > /dev/null 2>/dev/null &
+fi
+if [ ! -f /usr/bin/sar ]; then
+	# Sysstat centos/debian/ubuntu kurulumu + tüm os sistem güncelleme
+	yum -y install sysstat > /dev/null 2>/dev/null &
+	sudo apt-get update > /dev/null 2>/dev/null &
+	sudo apt-get -y install sysstat > /dev/null 2>/dev/null &
+fi
+if [ ! -f /usr/bin/bc ]; then
+	# bc centos/debian/ubuntu kurulumu + tüm os sistem güncelleme
+	yum -y install bc > /dev/null 2>/dev/null &
+	sudo apt-get update > /dev/null 2>/dev/null &
+	sudo apt-get -y install bc > /dev/null 2>/dev/null &
+fi
+if [ ! -d /tmp ]; then
+	mkdir -p /tmp
+fi
+# t1looker olusturup calistirabilinir hale getirme
+echo 'IyEvYmluL2Jhc2gKd2hpbGUgOgpkbwpDUFVnb3N0ZXI9YHNhciAtdSAgMSAxIHwgZ3JlcCBBdmVyYWdlOiB8IGF3ayAne3ByaW50ICQzfSdgCmJsb2NrPWBmZGlzayAtbHwgZ3JlcCBJL098ICBhd2sgJ3twcmludCAkN30nfCBoZWFkIC0xYApSQU1nb3N0ZXI9YHNhciAtciAgMSAxIHwgZ3JlcCBBdmVyYWdlOmAKdXNlZD1gZWNobyAiJFJBTWdvc3RlciIgfCBhd2sgJ3twcmludCAkM30nfCB0ciAuICcgJyB8IGF3ayAne3ByaW50ICQxfSdgCmJ1ZmZlcj1gZWNobyAiJFJBTWdvc3RlciIgfCBhd2sgJ3twcmludCAkNX0nfCB0ciAuICcgJyB8IGF3ayAne3ByaW50ICQxfSdgCmNhY2hlZD1gZWNobyAiJFJBTWdvc3RlciIgfCBhd2sgJ3twcmludCAkNn0nfCB0ciAuICcgJyB8IGF3ayAne3ByaW50ICQxfSdgClJBTWt1bGxhbmltaT0kKCgodXNlZC1idWZmZXItY2FjaGVkKS8xMDI0KSkKbmV0c3RhdF9hbl9ncmVwXzgwPWBuZXRzdGF0IC1hbnxncmVwIDo4MGAKbmV0c3RhdF9hbl9ncmVwXzQ0Mz1gbmV0c3RhdCAtYW58Z3JlcCA6NDQzYApuZXRzdGF0X2FuX2dyZXBfRVNUQT1gbmV0c3RhdCAtYW4gfCBncmVwIEVTVEFgCm5ldHN0YXRwb3J0ODA9ImBlY2hvICIkbmV0c3RhdF9hbl9ncmVwXzgwIiB8YXdrICchLzo4MDgwLyd8YXdrICchLzo4MDgxLycgfGF3ayAne3ByaW50ICQ1fSd8Y3V0IC1kIjoiIC1mMXxzb3J0fHVuaXEgLWN8c29ydCAtcm4gfCBncmVwICdcLid8IGdyZXAgLXYgIjAuMC4wLjAiYCIKbmV0c3RhdHBvcnQ0NDM9ImBlY2hvICIkbmV0c3RhdF9hbl9ncmVwXzQ0MyIgfGF3ayAne3ByaW50ICQ1fSd8Y3V0IC1kIjoiIC1mMXxzb3J0fHVuaXEgLWN8c29ydCAtcm4gfCBncmVwICdcLid8IGdyZXAgLXYgIjAuMC4wLjAifHRyIC1zICIgImAiCnBvcnQ4MHJlcXVlc3RzPWBuZXRzdGF0IC1uIHwgZ3JlcCA6ODAgfGF3ayAnIS86ODA4MC8nfGF3ayAnIS86ODA4MS8nfHdjIC1sYApwb3J0NDQzcmVxdWVzdHM9YG5ldHN0YXQgLW4gfCBncmVwIDo0NDMgfHdjIC1sYApwb3J0ODBudW1iZXJpcD1gZWNobyAiJG5ldHN0YXRwb3J0ODAifCB3YyAtbGAKcG9ydDQ0M251bWJlcmlwPWBlY2hvICIkbmV0c3RhdHBvcnQ0NDMifCB3YyAtbGAKcG9ydDgwdGhpZXRsYXA9YGVjaG8gIiRuZXRzdGF0X2FuX2dyZXBfODAifGF3ayAnIS86ODA4MC8nfGF3ayAnIS86ODA4MS8nfCBncmVwIEVTVEF8IHdjIC1sYApwb3J0NDQzdGhpZXRsYXA9YGVjaG8gIiRuZXRzdGF0X2FuX2dyZXBfNDQzIiB8IGdyZXAgRVNUQSB8IHdjIC1sYApsaXN0aXBob3N0bmFtZT1gbmV0c3RhdCAtdG4gfCBhd2sgJ3twcmludCAkNX0nIHwgc2VkIC1lICdzLzouKi8vJyB8IGdyZXAgJ1wuJ3x4YXJncyAtaSBzaCAtYyAnZWNobyB7fSAkKGdldGVudCBob3N0cyB7fSknIHwgYXdrICckMSA9PSAkMiB7cHJpbnQgJDIsICQzOyBuZXh0fTsge3ByaW50fScgfCBzb3J0IHwgdW5pcSAtYyB8IHNvcnQgLW5yIHwgaGVhZCAtMjRgCgpjb2x1bW49YHByIC1tVCAgLS13aWR0aD0xNDUgLS1wYWdlLXdpZHRoPTE0NSA8KGVjaG8gIlJlcXVlc3QvSXN0ZWsgR29uZGVyZW4gSXAgQWRyZXNsZXJpOiAiOyBlY2hvICIkbGlzdGlwaG9zdG5hbWUiKWAKCmNsZWFyCmVjaG8gJwogIyMjIyMjIyMgICAjIyAgICMjICAgICAgICAjIyMjIyMjICAgIyMjIyMjIyAgIyMgICAgIyMgCiAgICAjIyAgICAjIyMjICAgIyMgICAgICAgIyMgICAgICMjICMjICAgICAjIyAjIyAgICMjIENvZGVkCiAgICAjIyAgICAgICMjICAgIyMgICAgICAgIyMgICAgICMjICMjICAgICAjIyAjIyAgIyMgICAgICBCeQogICAgIyMgICAgICAjIyAgICMjICAgICAgICMjICAgICAjIyAjIyAgICAgIyMgIyMjIyMgICAgICAgVDEzUiAvIEwxbnV4LURldgogICAgIyMgICAgICAjIyAgICMjICAgICAgICMjICAgICAjIyAjIyAgICAgIyMgIyMgICMjICAgLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAjIyAgICAjIyMjIyMgIyMjIyMjIyMgICMjIyMjIyMgICAjIyMjIyMjICAjIyAgICAjIyBHaXRodWI6IEBlcnR1Z3J1bHR1cmFuCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgIC0tLT4gQmVzdCBMNC9MNyBBbnRpLUREb1MgSG9zdGluZyBCeSBERG9TVGVjaC5Db20gPC0tCgogIENQVSBrdWxsYW5pbWk6IH4nJENQVWdvc3RlciclIAlSQU0ga3VsbGFuaW1pOiB+JyRSQU1rdWxsYW5pbWknTUIKCiAgIDgwIHBvcnR1IGdpZGVuIHRvcGxhbSBpc3RlayBzYXnEsXPEsTogJyRwb3J0ODByZXF1ZXN0cycJKCckcG9ydDgwbnVtYmVyaXAnIElQIEFkcmVzaSBpc3RlZ2kpCSAKICAgNDQzIHBvcnR1IGdpZGVuIHRvcGxhbSBpc3RlayBzYXnEsXPEsTogJyRwb3J0NDQzcmVxdWVzdHMnCSgnJHBvcnQ0NDNudW1iZXJpcCcgSVAgQWRyZXNpIGlzdGVnaSkJCgkJCQkJCQkJCQkJCgkgTGF5ZXI3L1dlYiBpY2luIGt1cnVsYW4gdG9wbGFtIGJhZ2xhbnRpIHNheWlzaToJCSAgICAgICAgICAgIAkKCSBQb3J0IDgwOiAnJHBvcnQ4MHRoaWV0bGFwJyBCYWdsYW50aQkJICAgIAkJCgkgUG9ydCA0NDM6ICckcG9ydDQ0M3RoaWV0bGFwJyBCYWdsYW50aQkJCQkKCiciJGNvbHVtbiInJyAgCmRvbmU=' | base64 --decode > t1look
+chmod +x t1look
+mv t1look /usr/bin/
+clear
+echo "[#          ] %5 Yukleniyor..."
+sleep 2
+clear
+echo "[##         ] %15 Yukleniyor..."
+sleep 1
+clear
+echo "[####       ] %20 Yukleniyor..."
+sleep 4
+clear
+echo "[#####      ] %30 Yukleniyor..."
+sleep 5
+clear
+echo "[#########  ] %80 Yukleniyor..."
+sleep 5
+clear
+echo "[########## ] %90 Yukleniyor..."
+sleep 1
+clear
+echo "[###########] %100 Basariyla Kuruldu"
+echo 't1looker kuruldu!'
+echo "$ t1looker"
+echo "Komutunu kullanarak yazılımı çalıştırabilir CTRL+C Yaparak durdurabilirsiniz.."
